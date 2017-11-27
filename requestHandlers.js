@@ -1,4 +1,3 @@
-var exec = require("child_process").exec;
 var querystring = require("querystring"),
     fs = require("fs");
 
@@ -40,7 +39,7 @@ function show(response, postData) {
             response.write(error + "\n");
             response.end();
         } else {
-            response.writeHead(200, {"Content-Type": "image/plain"});
+            response.writeHead(200, {"Content-Type": "image/png"});
             response.write(file, "binary");
             response.end();
         }
